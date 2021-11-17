@@ -1313,6 +1313,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerCharacterController: {fileID: 493529278}
   destination: {fileID: 2006537966}
+  destinationParent: {fileID: 0}
+  eventAfterTeleport:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &586313738
 Transform:
   m_ObjectHideFlags: 0
@@ -2799,14 +2803,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1459383987917688582, guid: 72e65beebf547c64290df761998672e9, type: 3}
-      propertyPath: useJump
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1459383987917688582, guid: 72e65beebf547c64290df761998672e9, type: 3}
-      propertyPath: useMove
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1459383987917688583, guid: 72e65beebf547c64290df761998672e9, type: 3}
       propertyPath: m_RootOrder
       value: 1

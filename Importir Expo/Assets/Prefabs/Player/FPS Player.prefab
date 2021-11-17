@@ -349,6 +349,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseSensitivity: 500
   playerBody: {fileID: 1459383987917688583}
+  camera: {fileID: 1459383988261354801}
+  defaultFOV: 60
 --- !u!114 &22664928
 MonoBehaviour:
   m_ObjectHideFlags: 0
