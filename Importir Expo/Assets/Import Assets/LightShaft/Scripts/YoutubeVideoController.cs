@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
 using Button = UnityEngine.UI.Button;
@@ -55,14 +54,14 @@ namespace LightShaft.Scripts
                     nextVideoButton.gameObject.SetActive(true);
                 }
             }
-            
+
             if (showPlayerControl)
             {
-                if(speedSlider == null)
+                if (speedSlider == null)
                     Debug.LogWarning("Drag the playback speed slider to the speedSlider field.");
-                if(volumeSlider == null)
+                if (volumeSlider == null)
                     Debug.LogWarning("Drag the volume eslider to the volumeSlider field.");
-                if(playbackSlider == null)
+                if (playbackSlider == null)
                     Debug.LogWarning("Drag the playback slider to the playbackSlider field, this is necessary to change the video progress.");
             }
             speedSlider.maxValue = 3;   //max playback speed is 3;
@@ -115,7 +114,7 @@ namespace LightShaft.Scripts
 
         public void ChangePlaybackSpeed(float speed)
         {
-            if(!_player.videoPlayer.canSetPlaybackSpeed) return;
+            if (!_player.videoPlayer.canSetPlaybackSpeed) return;
             if (speed <= 0)
             {
                 _player.videoPlayer.playbackSpeed = .5f;
@@ -126,7 +125,7 @@ namespace LightShaft.Scripts
                 _player.videoPlayer.playbackSpeed = speed;
                 _player.audioPlayer.playbackSpeed = speed;
             }
-           
+
         }
 
         public void PlayNextVideo()
@@ -134,10 +133,10 @@ namespace LightShaft.Scripts
             if (!NextVideo())
                 Debug.Log("Cannot play the next video.");
         }
-        
+
         public void PlayPreviousVideo()
         {
-            if(!PreviousVideo())
+            if (!PreviousVideo())
                 Debug.Log("Cannot play the previous video.");
         }
 
@@ -145,8 +144,9 @@ namespace LightShaft.Scripts
         {
             if (_player.customPlaylist)
             {
-                _player.CallNextUrl();  return true;
-            }else 
+                _player.CallNextUrl(); return true;
+            }
+            else
                 return false;
         }
 
@@ -156,7 +156,8 @@ namespace LightShaft.Scripts
             {
                 _player.CallPreviousUrl();
                 return true;
-            }else return false;
+            }
+            else return false;
         }
 
         public void ChangeVideoTime(float value)
@@ -176,7 +177,7 @@ namespace LightShaft.Scripts
         {
             _player.ToogleFullsScreenMode();
         }
-        
+
         public void HideControllers()
         {
             if (controllerMainUI != null)

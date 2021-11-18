@@ -1,10 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using LightShaft.Scripts;
+﻿using LightShaft.Scripts;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PauseIcon : MonoBehaviour {
+public class PauseIcon : MonoBehaviour
+{
 
     public YoutubePlayer p;
     public Image playImage;

@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.Video;
 
 namespace LightShaft.Scripts
@@ -240,7 +238,8 @@ namespace LightShaft.Scripts
                 if (_controller.playbackSlider == null)
                 {
                     _controller.showPlayerControl = false;  //Disable player controller because there is not playback controller attached;
-                }else
+                }
+                else
                     _controller.playbackSlider.maxValue = Mathf.RoundToInt(videoPlayer.frameCount / videoPlayer.frameRate);
             }
 
@@ -359,5 +358,5 @@ namespace LightShaft.Scripts
 
         }
     }
-    
+
 }

@@ -1,13 +1,13 @@
+using LightShaft.Scripts;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using LightShaft.Scripts;
 
 [RequireComponent(typeof(DownloadFile))]
 public class YoutubeUrlManager : MonoBehaviour
 {
-    [SerializeField, TextArea(3,4)] string csvUrl;
-    [SerializeField] List<YoutubeEntity> youtubeUrls;
+    [SerializeField, TextArea(3, 4)] string csvUrl;
+    [SerializeField] List<LinkFromCsv> youtubeUrls;
     [SerializeField] YoutubePlayer[] youtubePlayers;
     private DownloadFile downloadFile;
 
@@ -18,7 +18,8 @@ public class YoutubeUrlManager : MonoBehaviour
         downloadFile.Get(csvUrl, (string error) =>
         {
             Debug.Log("ERROR: " + error);
-        }, (string text) => {
+        }, (string text) =>
+        {
             Debug.Log("Received: " + text);
             CsvToYoutubeUrl(text);
             for (int i = 0; i < youtubeUrls.Count; i++)
@@ -41,7 +42,7 @@ public class YoutubeUrlManager : MonoBehaviour
         {
             if (i + 1 < lines.Length)
             {
-                YoutubeEntity youtubeEntity = new YoutubeEntity();
+                LinkFromCsv youtubeEntity = new LinkFromCsv();
                 string[] data = lines[i + 1].Split(',');
                 youtubeEntity.id = data[0];
                 youtubeEntity.url = data[1];

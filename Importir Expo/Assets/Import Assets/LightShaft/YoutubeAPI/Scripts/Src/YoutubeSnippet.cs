@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class YoutubeSnippet  {
+﻿public class YoutubeSnippet
+{
 
     public string publishedAt;
     public string channelId;

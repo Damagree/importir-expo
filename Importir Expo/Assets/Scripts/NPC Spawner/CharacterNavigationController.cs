@@ -1,6 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections.Generic;
-using UnityEngine.Experimental.VFX;
 
 public class CharacterNavigationController : MonoBehaviour
 {
@@ -23,7 +21,7 @@ public class CharacterNavigationController : MonoBehaviour
 
     void Update()
     {
-        if(transform.position != destination)
+        if (transform.position != destination)
         {
             Vector3 destinationDirection = destination - transform.position;
             destinationDirection.y = 0;

@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
 public class WaypointNavigator : MonoBehaviour
 {
@@ -21,13 +18,13 @@ public class WaypointNavigator : MonoBehaviour
     {
         direction = Mathf.RoundToInt(Random.Range(0f, 1f));
 
-        controller.SetDestination(currentWaypoint.GetPosition());    
+        controller.SetDestination(currentWaypoint.GetPosition());
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Vector3.Distance(controller.destination, transform.position) <= controller.stopDistance)
+        if (Vector3.Distance(controller.destination, transform.position) <= controller.stopDistance)
         {
             if (direction == 0)
             {

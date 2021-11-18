@@ -10,7 +10,7 @@ namespace LightShaft.Scripts.CustomTools
     {
         public UnityEvent onSliderStartDrag;
         public SliderDragEvent onSliderEndDrag;
-        
+
         private float SliderValue
         {
             get { return gameObject.GetComponent<Slider>().value; }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -34,7 +32,9 @@ public class InteractWithButton : MonoBehaviour
                 // check if there's no object stored in gazedAtObject
                 else if (_gazedAtObject != null)
                 {
+#if UNITY_EDITOR
                     Debug.Log("Looking at " + _gazedAtObject.name);
+#endif
                     _onPointerEnter.Invoke();
                     if (Input.GetKeyDown(KeyCode.Mouse0))
                     {

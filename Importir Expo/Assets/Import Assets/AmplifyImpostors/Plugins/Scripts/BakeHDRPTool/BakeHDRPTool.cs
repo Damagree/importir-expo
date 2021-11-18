@@ -7,8 +7,8 @@ using UnityEngine.Rendering;
 
 namespace AmplifyImpostors
 {
-	public class BakeHDRPTool
-	{
+    public class BakeHDRPTool
+    {
 #if HDRP10
 		static UnityEngine.Rendering.HighDefinition.ShaderVariablesGlobal g_globalShaderVariables = new UnityEngine.Rendering.HighDefinition.ShaderVariablesGlobal();
 		public static void SetupShaderVariableGlobals( Matrix4x4 viewMat, Matrix4x4 projMatrix , CommandBuffer commandBuffer )
@@ -21,7 +21,7 @@ namespace AmplifyImpostors
 			ConstantBuffer.PushGlobal( commandBuffer, g_globalShaderVariables, UnityEngine.Rendering.HighDefinition.HDShaderIDs._ShaderVariablesGlobal );
 		}
 #else
-			public static void SetupShaderVariableGlobals( Matrix4x4 viewMat, Matrix4x4 projMatrix , CommandBuffer commandBuffer ){/*This does nothing on HDRP lower that 10*/}
+        public static void SetupShaderVariableGlobals(Matrix4x4 viewMat, Matrix4x4 projMatrix, CommandBuffer commandBuffer) {/*This does nothing on HDRP lower that 10*/}
 #endif
-	}
+    }
 }

@@ -2,7 +2,7 @@
 
 namespace YoutubeLight
 {
-    
+
     public abstract class Downloader
     {
         /// <param name="video">The video.</param>
@@ -24,19 +24,19 @@ namespace YoutubeLight
 
         public event EventHandler DownloadFinished;
 
-       
+
         public event EventHandler DownloadStarted;
 
-       
+
         public int? BytesToDownload { get; private set; }
 
-       
+
         public string SavePath { get; private set; }
 
-       
+
         public VideoInfo Video { get; private set; }
 
-       
+
         public abstract void Execute();
 
         protected void OnDownloadFinished(EventArgs e)

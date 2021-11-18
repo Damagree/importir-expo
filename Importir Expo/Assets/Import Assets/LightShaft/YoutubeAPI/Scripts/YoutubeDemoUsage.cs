@@ -1,13 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using LightShaft.Scripts;
+﻿using LightShaft.Scripts;
 using UnityEngine;
 using UnityEngine.Video;
 
-public class YoutubeDemoUsage : MonoBehaviour {
+public class YoutubeDemoUsage : MonoBehaviour
+{
     public GameObject mainUI;
 
-	public void DemoPlayback()
+    public void DemoPlayback()
     {
         //search for the low quality if not find search for highquality
         if (GameObject.FindObjectOfType<YoutubePlayer>() != null)
@@ -28,7 +27,7 @@ public class YoutubeDemoUsage : MonoBehaviour {
             GameObject.FindObjectOfType<YoutubePlayer>().Play(videoUrlInput.text);
             GameObject.FindObjectOfType<YoutubePlayer>().videoPlayer.loopPointReached += OnVideoFinished;
         }
-       
+
         mainUI.SetActive(false);
     }
 

@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using UnityEditor;
+using UnityEngine;
 
 [InitializeOnLoad()]
 
@@ -10,7 +8,7 @@ public class WaypointEditor : MonoBehaviour
     [DrawGizmo(GizmoType.NonSelected | GizmoType.Selected | GizmoType.Pickable)]
     public static void OnDrawSceneGizmo(Waypoint waypoint, GizmoType gizmoType)
     {
-        if((gizmoType & GizmoType.Selected) != 0)
+        if ((gizmoType & GizmoType.Selected) != 0)
         {
             Gizmos.color = Color.yellow;
         }
@@ -24,7 +22,7 @@ public class WaypointEditor : MonoBehaviour
         Gizmos.color = Color.white;
         Gizmos.DrawLine(waypoint.transform.position + (waypoint.transform.right * waypoint.width / 2f), waypoint.transform.position - (waypoint.transform.right * waypoint.width / 2f));
 
-        if(waypoint.previousWaypoint != null)
+        if (waypoint.previousWaypoint != null)
         {
             Gizmos.color = Color.red;
             Vector3 offset = waypoint.transform.right * waypoint.width / 2f;

@@ -1,9 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class PlaylistDemo : MonoBehaviour {
+public class PlaylistDemo : MonoBehaviour
+{
     YoutubeAPIManager youtubeapi;
 
     public Text searchField;
@@ -23,7 +22,7 @@ public class PlaylistDemo : MonoBehaviour {
 
     public void GetPlaylist()
     {
-       youtubeapi.GetPlaylistItems(searchField.text, 10, OnGetPlaylistDone);
+        youtubeapi.GetPlaylistItems(searchField.text, 10, OnGetPlaylistDone);
     }
 
     void OnGetPlaylistDone(YoutubePlaylistItems[] results)

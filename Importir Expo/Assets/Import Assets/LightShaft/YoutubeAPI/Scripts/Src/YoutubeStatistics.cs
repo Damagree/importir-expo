@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class YoutubeStatistics {
+﻿public class YoutubeStatistics
+{
 
     public string viewCount;
     public string likeCount;

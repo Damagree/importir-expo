@@ -1,10 +1,10 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 
-public class YoutubeChannelUI : MonoBehaviour {
+public class YoutubeChannelUI : MonoBehaviour
+{
 
     public Text videoName;
     public string videoId, thumbUrl;

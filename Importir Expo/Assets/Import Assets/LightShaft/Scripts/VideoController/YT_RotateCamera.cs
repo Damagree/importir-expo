@@ -1,8 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class YT_RotateCamera : MonoBehaviour {
+public class YT_RotateCamera : MonoBehaviour
+{
 
     public float speedH = 2.0f;
     public float speedV = 2.0f;

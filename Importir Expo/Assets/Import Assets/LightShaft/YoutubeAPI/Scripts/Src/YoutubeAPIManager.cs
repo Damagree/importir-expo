@@ -1,11 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using SimpleJSON;
+﻿using SimpleJSON;
 using System;
+using System.Collections;
+using UnityEngine;
 using UnityEngine.Networking;
 
-public class YoutubeAPIManager : MonoBehaviour {
+public class YoutubeAPIManager : MonoBehaviour
+{
 
     private YoutubeData data;
     private YoutubeData[] searchResults;
@@ -27,7 +27,7 @@ public class YoutubeAPIManager : MonoBehaviour {
 
     private const string APIKey = "AIzaSyCSh8NNjutCdJ3pAMJjWrGFbB8_onIMn1Y";
     /*AIzaSyCSh8NNjutCdJ3pAMJjWrGFbB8_onIMn1Y*/
-        /*"AIzaSyAyctJVli2oEUoXZ8ta_4O0nKyknwXzvaw";*/
+    /*"AIzaSyAyctJVli2oEUoXZ8ta_4O0nKyknwXzvaw";*/
 
     public void GetVideoData(string videoId, Action<YoutubeData> callback)
     {
@@ -42,7 +42,7 @@ public class YoutubeAPIManager : MonoBehaviour {
 
     public void GetChannelVideos(string channelId, int maxResults, Action<YoutubeData[]> callback)
     {
-        StartCoroutine(GetVideosFromChannel(channelId, maxResults,callback));
+        StartCoroutine(GetVideosFromChannel(channelId, maxResults, callback));
     }
 
     public void Search(string keyword, int maxResult, YoutubeSearchOrderFilter order, YoutubeSafeSearchFilter safeSearch, string customFilters, Action<YoutubeData[]> callback)
@@ -52,7 +52,7 @@ public class YoutubeAPIManager : MonoBehaviour {
 
     public void TrendingVideos(string regionCode, int maxResult, Action<YoutubeData[]> callback)
     {
-        StartCoroutine(GetTrendingVideos(regionCode,maxResult,callback));
+        StartCoroutine(GetTrendingVideos(regionCode, maxResult, callback));
     }
 
     public void SearchForChannels(string keyword, int maxResult, YoutubeSearchOrderFilter order, YoutubeSafeSearchFilter safeSearch, Action<YoutubeChannel[]> callback)
@@ -65,7 +65,7 @@ public class YoutubeAPIManager : MonoBehaviour {
         StartCoroutine(YoutubeSearchUsingCategory(keyword, category, maxResult, order, safeSearch, callback));
     }
 
-    public void SearchByLocation(string keyword, int maxResult,int locationRadius, float latitude, float longitude, YoutubeSearchOrderFilter order, YoutubeSafeSearchFilter safeSearch, string customFilters, Action<YoutubeData[]> callback)
+    public void SearchByLocation(string keyword, int maxResult, int locationRadius, float latitude, float longitude, YoutubeSearchOrderFilter order, YoutubeSafeSearchFilter safeSearch, string customFilters, Action<YoutubeData[]> callback)
     {
         StartCoroutine(YoutubeSearchByLocation(keyword, maxResult, locationRadius, latitude, longitude, order, safeSearch, customFilters, callback));
     }
@@ -75,7 +75,7 @@ public class YoutubeAPIManager : MonoBehaviour {
         StartCoroutine(YoutubeCallComments(videoId, callback));
     }
 
-    public void GetPlaylistItems(string playlistId,int maxResults, Action<YoutubePlaylistItems[]> callback)
+    public void GetPlaylistItems(string playlistId, int maxResults, Action<YoutubePlaylistItems[]> callback)
     {
         StartCoroutine(YoutubeCallPlaylist(playlistId, maxResults, callback));
     }
@@ -96,7 +96,7 @@ public class YoutubeAPIManager : MonoBehaviour {
         callback.Invoke(searchResults);
     }
 
-    IEnumerator YoutubeCallPlaylist(string playlistId,int maxResults, Action<YoutubePlaylistItems[]> callback)
+    IEnumerator YoutubeCallPlaylist(string playlistId, int maxResults, Action<YoutubePlaylistItems[]> callback)
     {
 
         UnityWebRequest request = UnityWebRequest.Get("https://www.googleapis.com/youtube/v3/playlistItems/?playlistId=" + playlistId + "&maxResults=" + maxResults + "&part=snippet%2CcontentDetails&key=" + APIKey);
@@ -191,7 +191,7 @@ public class YoutubeAPIManager : MonoBehaviour {
     IEnumerator GetTrendingVideos(string regionCode, int maxresult, Action<YoutubeData[]> callback)
     {
 
-        string newurl = UnityWebRequest.EscapeURL("https://www.googleapis.com/youtube/v3/videos?part=snippet,id&chart=mostPopular&regionCode=" + regionCode+"&maxResults="+maxresult+"&key="+APIKey);
+        string newurl = UnityWebRequest.EscapeURL("https://www.googleapis.com/youtube/v3/videos?part=snippet,id&chart=mostPopular&regionCode=" + regionCode + "&maxResults=" + maxresult + "&key=" + APIKey);
 
         UnityWebRequest request = UnityWebRequest.Get(UnityWebRequest.UnEscapeURL(newurl));
         yield return request.SendWebRequest();
@@ -209,19 +209,19 @@ public class YoutubeAPIManager : MonoBehaviour {
         callback.Invoke(searchResults);
     }
 
-    IEnumerator YoutubeSearch(string keyword,int maxresult, YoutubeSearchOrderFilter order, YoutubeSafeSearchFilter safeSearch, string customFilters, Action<YoutubeData[]> callback)
+    IEnumerator YoutubeSearch(string keyword, int maxresult, YoutubeSearchOrderFilter order, YoutubeSafeSearchFilter safeSearch, string customFilters, Action<YoutubeData[]> callback)
     {
         keyword = keyword.Replace(" ", "%20");
 
-        string orderFilter,safeSearchFilter;
+        string orderFilter, safeSearchFilter;
         orderFilter = "";
         if (order != YoutubeSearchOrderFilter.none)
         {
-            orderFilter = "&order="+order.ToString();
+            orderFilter = "&order=" + order.ToString();
         }
         safeSearchFilter = "&safeSearch=" + safeSearch.ToString();
 
-        string newurl = UnityWebRequest.EscapeURL("https://www.googleapis.com/youtube/v3/search/?q=" + keyword + "&type=video&maxResults=" + maxresult + "&part=snippet,id&key=" + APIKey + "" + orderFilter + "" + safeSearchFilter+""+customFilters);
+        string newurl = UnityWebRequest.EscapeURL("https://www.googleapis.com/youtube/v3/search/?q=" + keyword + "&type=video&maxResults=" + maxresult + "&part=snippet,id&key=" + APIKey + "" + orderFilter + "" + safeSearchFilter + "" + customFilters);
         Debug.Log(newurl);
 
         UnityWebRequest request = UnityWebRequest.Get(UnityWebRequest.UnEscapeURL(newurl));
@@ -239,7 +239,7 @@ public class YoutubeAPIManager : MonoBehaviour {
         callback.Invoke(searchResults);
     }
 
-    IEnumerator YoutubeSearchByLocation(string keyword, int maxResult, int locationRadius, float latitude, float longitude, YoutubeSearchOrderFilter order, YoutubeSafeSearchFilter safeSearch,string customFilters, Action<YoutubeData[]> callback)
+    IEnumerator YoutubeSearchByLocation(string keyword, int maxResult, int locationRadius, float latitude, float longitude, YoutubeSearchOrderFilter order, YoutubeSafeSearchFilter safeSearch, string customFilters, Action<YoutubeData[]> callback)
     {
         keyword = keyword.Replace(" ", "%20");
         string orderFilter, safeSearchFilter;
@@ -256,7 +256,7 @@ public class YoutubeAPIManager : MonoBehaviour {
         JSONNode result = JSON.Parse(request.downloadHandler.text);
         searchResults = new YoutubeData[result["items"].Count];
         Debug.Log(searchResults.Length);
-        for(int itemsCounter = 0; itemsCounter < searchResults.Length; itemsCounter++)
+        for (int itemsCounter = 0; itemsCounter < searchResults.Length; itemsCounter++)
         {
             searchResults[itemsCounter] = new YoutubeData();
             searchResults[itemsCounter].id = result["items"][itemsCounter]["id"]["videoId"];
@@ -336,7 +336,7 @@ public class YoutubeAPIManager : MonoBehaviour {
         data.licensedContent = resultContentDetails["licensedContent"];
         data.projection = resultContentDetails["projection"];
 
-        if(resultContentDetails["contentRating"] != null)
+        if (resultContentDetails["contentRating"] != null)
         {
             Debug.Log("Age restrict found!");
             if (resultContentDetails["contentRating"]["ytRating"] == "ytAgeRestricted")
@@ -393,7 +393,8 @@ public class YoutubeData
     public string id;
 }
 
-public class YoutubeComments{
+public class YoutubeComments
+{
     public string authorDisplayName;
     public string authorProfileImageUrl;
     public string authorChannelUrl;

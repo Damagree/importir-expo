@@ -1,23 +1,23 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using LightShaft.Scripts;
+﻿using LightShaft.Scripts;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 using UnityEngine.Video;
 
-public class YoutubeVideoUi : MonoBehaviour {
+public class YoutubeVideoUi : MonoBehaviour
+{
 
     public Text videoName;
-    public string videoId,thumbUrl;
+    public string videoId, thumbUrl;
     public Image videoThumb;
     private GameObject mainUI;
     public void PlayYoutubeVideo()
     {
         //search for the low quality if not find search for highquality
-        if(GameObject.FindObjectOfType<YoutubePlayer>() != null)
+        if (GameObject.FindObjectOfType<YoutubePlayer>() != null)
         {
-            GameObject.FindObjectOfType<YoutubePlayer>().Play("https://youtube.com/watch?v="+videoId);
+            GameObject.FindObjectOfType<YoutubePlayer>().Play("https://youtube.com/watch?v=" + videoId);
             GameObject.FindObjectOfType<YoutubePlayer>().videoPlayer.loopPointReached += VideoFinished;
         }
 
@@ -36,7 +36,7 @@ public class YoutubeVideoUi : MonoBehaviour {
         {
             GameObject.FindObjectOfType<YoutubePlayer>().videoPlayer.loopPointReached -= VideoFinished;
         }
-        
+
         Debug.Log("Video Finished");
         mainUI.SetActive(true);
     }
