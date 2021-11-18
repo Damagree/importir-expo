@@ -34,12 +34,14 @@ public class OpenNewtab : MonoBehaviour
                 CsvToUrl(text);
                 for (int i = 0; i < listOfLink.Count; i++)
                 {
+                    int i2 = i;
                     for (int j = 0; j < buttons.Length; j++)
                     {
-                        if (buttons[j].gameObject.name == listOfLink[i].id)
+                        int j2 = j;
+                        if (buttons[j2].gameObject.name == listOfLink[i2].id)
                         {
-                            url = listOfLink[i].url;
-                            buttons[j].onClick.AddListener(OpenDefaultNewtab);
+                            buttons[j2].onClick.AddListener(delegate { OpenDefaultNewtab(listOfLink[i2].url); });
+                            Debug.Log("url: " + url + " | to button: " + buttons[j2].gameObject.name);
                         }
                     }
                 }
@@ -48,7 +50,7 @@ public class OpenNewtab : MonoBehaviour
         
     }
 
-    public void OpenDefaultNewtab()
+    public void OpenDefaultNewtab(string url)
     {
 #if !UNITY_EDITOR
 		openWindow(url);
