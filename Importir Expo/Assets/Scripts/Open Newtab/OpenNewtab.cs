@@ -53,7 +53,7 @@ public class OpenNewtab : MonoBehaviour
     public void OpenDefaultNewtab(string url)
     {
 #if !UNITY_EDITOR
-		openWindow(url);
+		OpenNewTab(url);
 #endif
 #if UNITY_EDITOR
         Debug.Log("Opening new tab: " + url);
@@ -77,5 +77,5 @@ public class OpenNewtab : MonoBehaviour
     }
 
     [DllImport("__Internal")]
-    private static extern void openWindow(string url);
+    private static extern void OpenNewTab(string url);
 }
