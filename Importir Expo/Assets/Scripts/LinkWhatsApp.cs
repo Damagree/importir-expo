@@ -1,79 +1,15 @@
 ﻿using System.Runtime.InteropServices;
 using UnityEngine;
 
-public class LinkWhatsApp : MonoBehaviour
+public class LinkNewTab : MonoBehaviour
 {
 
-    public void WA1()
+    public void Link(string url)
     {
-#if !UNITY_EDITOR
-		OpenNewTab("https://wa.me/6281312239464");
+#if !UNITY_EDITOR && UNITY_WEBGL
+		OpenNewTab(url);
 #endif
     }
-
-    public void WA2()
-    {
-#if !UNITY_EDITOR
-		OpenNewTab("");
-#endif
-    }
-
-    public void WA3()
-    {
-#if !UNITY_EDITOR
-		OpenNewTab("");
-#endif
-    }
-
-    public void WA4()
-    {
-#if !UNITY_EDITOR
-		OpenNewTab("");
-#endif
-    }
-
-    public void WA5()
-    {
-#if !UNITY_EDITOR
-		OpenNewTab("");
-#endif
-    }
-
-    public void WA6()
-    {
-#if !UNITY_EDITOR
-		OpenNewTab("");
-#endif
-    }
-
-    public void WA7()
-    {
-#if !UNITY_EDITOR
-		OpenNewTab("");
-#endif
-    }
-
-    public void WA8()
-    {
-#if !UNITY_EDITOR
-		OpenNewTab("");
-#endif
-    }
-
-    public void WA9()
-    {
-#if !UNITY_EDITOR
-		OpenNewTab("");
-#endif
-    }
-
-    public void WA10()
-    {
-#if !UNITY_EDITOR
-		OpenNewTab("");
-#endif
-    }
-
 
     [DllImport("__Internal")]
     private static extern void OpenNewTab(string url);
