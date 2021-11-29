@@ -6,6 +6,9 @@ using UnityEngine;
 [RequireComponent(typeof(DownloadFile))]
 public class YoutubeUrlManager : MonoBehaviour
 {
+    enum ON_LOADED { PRELOAD_URL, LOAD_AND_PLAY };
+
+    [SerializeField] ON_LOADED loadType;
     [SerializeField, TextArea(3, 4)] string csvUrl;
     [SerializeField] List<LinkFromCsv> youtubeUrls;
     [SerializeField] YoutubePlayer[] youtubePlayers;
@@ -22,16 +25,33 @@ public class YoutubeUrlManager : MonoBehaviour
         {
             Debug.Log("Received: " + text);
             CsvToYoutubeUrl(text);
-            for (int i = 0; i < youtubeUrls.Count; i++)
+            if (loadType == ON_LOADED.LOAD_AND_PLAY)
             {
-                for (int j = 0; j < youtubePlayers.Length; j++)
+                for (int i = 0; i < youtubeUrls.Count; i++)
                 {
-                    if (youtubePlayers[j].gameObject.name == youtubeUrls[i].id)
+                    for (int j = 0; j < youtubePlayers.Length; j++)
                     {
-                        youtubePlayers[j].Play(youtubeUrls[i].url);
+                        if (youtubePlayers[j].gameObject.name == youtubeUrls[i].id)
+                        {
+                            youtubePlayers[j].Play(youtubeUrls[i].url);
+                        }
                     }
                 }
             }
+            else if (loadType == ON_LOADED.PRELOAD_URL)
+            {
+                for (int i = 0; i < youtubeUrls.Count; i++)
+                {
+                    for (int j = 0; j < youtubePlayers.Length; j++)
+                    {
+                        if (youtubePlayers[j].gameObject.name == youtubeUrls[i].id)
+                        {
+                            youtubePlayers[j].PreLoadVideo(youtubeUrls[i].url);
+                        }
+                    }
+                }
+            }
+            
         });
     }
 

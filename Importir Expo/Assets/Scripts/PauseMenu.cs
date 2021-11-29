@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -6,6 +7,8 @@ public class PauseMenu : MonoBehaviour
     public static bool GameIsPaused = false;
 
     [SerializeField] GameObject pauseMenuUi;
+    [SerializeField] UnityEvent resumeEvent;
+    [SerializeField] UnityEvent pauseEvent;
 
     // Update is called once per frame
     void Update()
@@ -29,6 +32,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         GameIsPaused = false;
         Cursor.lockState = CursorLockMode.Locked;
+        resumeEvent.Invoke();
     }
 
     void Pause()
@@ -37,5 +41,6 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0f;
         GameIsPaused = true;
         Cursor.lockState = CursorLockMode.None;
+        pauseEvent.Invoke();
     }
 }

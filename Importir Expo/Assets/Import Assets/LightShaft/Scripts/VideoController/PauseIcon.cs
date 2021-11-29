@@ -15,12 +15,12 @@ public class PauseIcon : MonoBehaviour
         if (p.pauseCalled)
         {
             playImage.gameObject.SetActive(true);
-            pauseImage.gameObject.SetActive(false);
+            pauseImage?.gameObject.SetActive(false);
         }
         else
         {
             pauseImage.gameObject.SetActive(true);
-            playImage.gameObject.SetActive(false);
+            playImage?.gameObject.SetActive(false);
         }
     }
 }
