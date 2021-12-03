@@ -1,3 +1,2 @@
 # importir-expo
-Virtual Expo for importir.org
-Hai
+Virtual Expo for importir
