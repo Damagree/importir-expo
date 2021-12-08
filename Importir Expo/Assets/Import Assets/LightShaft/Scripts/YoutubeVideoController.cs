@@ -59,12 +59,14 @@ namespace LightShaft.Scripts
             {
                 if (speedSlider == null)
                     Debug.LogWarning("Drag the playback speed slider to the speedSlider field.");
+                else 
+                    speedSlider.maxValue = 3;   //max playback speed is 3;
                 if (volumeSlider == null)
                     Debug.LogWarning("Drag the volume eslider to the volumeSlider field.");
                 if (playbackSlider == null)
                     Debug.LogWarning("Drag the playback slider to the playbackSlider field, this is necessary to change the video progress.");
             }
-            speedSlider.maxValue = 3;   //max playback speed is 3;
+            
 
             if (useSliderToProgressVideo)
             {
@@ -73,8 +75,8 @@ namespace LightShaft.Scripts
             }
             else
             {
-                playbackSlider.gameObject.SetActive(false);
-                progressRectangle.gameObject.SetActive(true);
+                playbackSlider?.gameObject.SetActive(false);
+                progressRectangle?.gameObject.SetActive(true);
             }
         }
 
@@ -185,8 +187,8 @@ namespace LightShaft.Scripts
                 controllerMainUI.SetActive(false);
                 showingVolume = false;
                 showingSpeed = false;
-                volumeSlider.gameObject.SetActive(false);
-                speedSlider.gameObject.SetActive(false);
+                volumeSlider?.gameObject.SetActive(false);
+                speedSlider?.gameObject.SetActive(false);
             }
         }
 

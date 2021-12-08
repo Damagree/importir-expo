@@ -10,6 +10,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@800&family=Open+Sans:wght@300&display=swap" rel="stylesheet"> 
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
+    <?php
+        header("Access-Control-Allow-Headers: Authorization, Content-Type");
+        header("Access-Control-Allow-Origin: *");
+        header('content-type: application/json; charset=utf-8');
+    ?>
   </head>
   <body class="dark">
     <div id="unity-container" class="unity-desktop">

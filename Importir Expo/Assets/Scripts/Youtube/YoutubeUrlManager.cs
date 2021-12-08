@@ -46,6 +46,7 @@ public class YoutubeUrlManager : MonoBehaviour
                     {
                         if (youtubePlayers[j].gameObject.name == youtubeUrls[i].id)
                         {
+                            //youtubePlayers[j].PlayPause();
                             youtubePlayers[j].PreLoadVideo(youtubeUrls[i].url);
                         }
                     }

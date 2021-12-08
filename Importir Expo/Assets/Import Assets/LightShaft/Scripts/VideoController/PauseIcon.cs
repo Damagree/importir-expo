@@ -6,8 +6,8 @@ public class PauseIcon : MonoBehaviour
 {
 
     public YoutubePlayer p;
-    public Image playImage;
-    public Image pauseImage;
+    public Button playImage;
+    public Button pauseImage;
 
 
     private void FixedUpdate()
@@ -15,12 +15,12 @@ public class PauseIcon : MonoBehaviour
         if (p.pauseCalled)
         {
             playImage.gameObject.SetActive(true);
-            pauseImage?.gameObject.SetActive(false);
+            pauseImage.gameObject.SetActive(false);
         }
         else
         {
             pauseImage.gameObject.SetActive(true);
-            playImage?.gameObject.SetActive(false);
+            playImage.gameObject.SetActive(false);
         }
     }
 }

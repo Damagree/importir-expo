@@ -58,6 +58,7 @@ namespace LightShaft.Scripts
             Stop();
             prepareVideoToPlayLater = true;
             autoPlayOnStart = false;
+            Pause();
             PlayYoutubeVideo(url);
 
         }

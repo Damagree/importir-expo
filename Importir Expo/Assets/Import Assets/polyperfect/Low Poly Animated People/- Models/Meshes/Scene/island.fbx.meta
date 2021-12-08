@@ -1,111 +1,311 @@
 fileFormatVersion: 2
 guid: 6f88a256516292a43a44c63308d20e57
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: //RootNode
-    100002: island
-    100004: island.002
-    100006: island.004
-    100008: Camera
-    100010: island.001
-    100012: island.003
-    100014: Light
-    100016: man-prehistoric
-    100018: Bone
-    100020: Bone.001
-    100022: Bone.002
-    100024: Bone.003
-    100026: Bone.004
-    100028: Bone.005
-    100030: Bone.006
-    100032: Bone.007
-    100034: Bone.007_end
-    100036: Bone.008
-    100038: Bone.009
-    100040: Bone.010
-    100042: Bone.010_end
-    100044: Bone.011
-    100046: Bone.012
-    100048: Bone.013
-    100050: Bone.013_end
-    100052: Bone.014
-    100054: Bone.015
-    100056: Bone.016
-    100058: Bone.016_end
-    100060: Bone.017
-    100062: Bone.018
-    100064: Bone.019
-    100066: Bone.019_end
-    100068: palm
-    100070: RIG_palm
-    400000: //RootNode
-    400002: island
-    400004: island.002
-    400006: island.004
-    400008: Camera
-    400010: island.001
-    400012: island.003
-    400014: Light
-    400016: man-prehistoric
-    400018: Bone
-    400020: Bone.001
-    400022: Bone.002
-    400024: Bone.003
-    400026: Bone.004
-    400028: Bone.005
-    400030: Bone.006
-    400032: Bone.007
-    400034: Bone.007_end
-    400036: Bone.008
-    400038: Bone.009
-    400040: Bone.010
-    400042: Bone.010_end
-    400044: Bone.011
-    400046: Bone.012
-    400048: Bone.013
-    400050: Bone.013_end
-    400052: Bone.014
-    400054: Bone.015
-    400056: Bone.016
-    400058: Bone.016_end
-    400060: Bone.017
-    400062: Bone.018
-    400064: Bone.019
-    400066: Bone.019_end
-    400068: palm
-    400070: RIG_palm
-    2000000: Camera
-    2100000: No Name
-    2300000: //RootNode
-    2300002: island
-    2300004: island.002
-    2300006: island.004
-    2300008: island.001
-    2300010: island.003
-    2300012: man-prehistoric
-    2300014: palm
-    3300000: //RootNode
-    3300002: island
-    3300004: island.002
-    3300006: island.004
-    3300008: island.001
-    3300010: island.003
-    3300012: man-prehistoric
-    3300014: palm
-    4300000: island
-    4300002: island.002
-    4300004: island.004
-    4300006: man-prehistoric
-    4300008: island.001
-    4300010: island.003
-    4300012: palm
-    4300014: s
-    10800000: Light
-    2186277476908879412: ImportLogs
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: island
+  - first:
+      1: 100004
+    second: island.002
+  - first:
+      1: 100006
+    second: island.004
+  - first:
+      1: 100008
+    second: Camera
+  - first:
+      1: 100010
+    second: island.001
+  - first:
+      1: 100012
+    second: island.003
+  - first:
+      1: 100014
+    second: Light
+  - first:
+      1: 100016
+    second: man-prehistoric
+  - first:
+      1: 100018
+    second: Bone
+  - first:
+      1: 100020
+    second: Bone.001
+  - first:
+      1: 100022
+    second: Bone.002
+  - first:
+      1: 100024
+    second: Bone.003
+  - first:
+      1: 100026
+    second: Bone.004
+  - first:
+      1: 100028
+    second: Bone.005
+  - first:
+      1: 100030
+    second: Bone.006
+  - first:
+      1: 100032
+    second: Bone.007
+  - first:
+      1: 100034
+    second: Bone.007_end
+  - first:
+      1: 100036
+    second: Bone.008
+  - first:
+      1: 100038
+    second: Bone.009
+  - first:
+      1: 100040
+    second: Bone.010
+  - first:
+      1: 100042
+    second: Bone.010_end
+  - first:
+      1: 100044
+    second: Bone.011
+  - first:
+      1: 100046
+    second: Bone.012
+  - first:
+      1: 100048
+    second: Bone.013
+  - first:
+      1: 100050
+    second: Bone.013_end
+  - first:
+      1: 100052
+    second: Bone.014
+  - first:
+      1: 100054
+    second: Bone.015
+  - first:
+      1: 100056
+    second: Bone.016
+  - first:
+      1: 100058
+    second: Bone.016_end
+  - first:
+      1: 100060
+    second: Bone.017
+  - first:
+      1: 100062
+    second: Bone.018
+  - first:
+      1: 100064
+    second: Bone.019
+  - first:
+      1: 100066
+    second: Bone.019_end
+  - first:
+      1: 100068
+    second: palm
+  - first:
+      1: 100070
+    second: RIG_palm
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: island
+  - first:
+      4: 400004
+    second: island.002
+  - first:
+      4: 400006
+    second: island.004
+  - first:
+      4: 400008
+    second: Camera
+  - first:
+      4: 400010
+    second: island.001
+  - first:
+      4: 400012
+    second: island.003
+  - first:
+      4: 400014
+    second: Light
+  - first:
+      4: 400016
+    second: man-prehistoric
+  - first:
+      4: 400018
+    second: Bone
+  - first:
+      4: 400020
+    second: Bone.001
+  - first:
+      4: 400022
+    second: Bone.002
+  - first:
+      4: 400024
+    second: Bone.003
+  - first:
+      4: 400026
+    second: Bone.004
+  - first:
+      4: 400028
+    second: Bone.005
+  - first:
+      4: 400030
+    second: Bone.006
+  - first:
+      4: 400032
+    second: Bone.007
+  - first:
+      4: 400034
+    second: Bone.007_end
+  - first:
+      4: 400036
+    second: Bone.008
+  - first:
+      4: 400038
+    second: Bone.009
+  - first:
+      4: 400040
+    second: Bone.010
+  - first:
+      4: 400042
+    second: Bone.010_end
+  - first:
+      4: 400044
+    second: Bone.011
+  - first:
+      4: 400046
+    second: Bone.012
+  - first:
+      4: 400048
+    second: Bone.013
+  - first:
+      4: 400050
+    second: Bone.013_end
+  - first:
+      4: 400052
+    second: Bone.014
+  - first:
+      4: 400054
+    second: Bone.015
+  - first:
+      4: 400056
+    second: Bone.016
+  - first:
+      4: 400058
+    second: Bone.016_end
+  - first:
+      4: 400060
+    second: Bone.017
+  - first:
+      4: 400062
+    second: Bone.018
+  - first:
+      4: 400064
+    second: Bone.019
+  - first:
+      4: 400066
+    second: Bone.019_end
+  - first:
+      4: 400068
+    second: palm
+  - first:
+      4: 400070
+    second: RIG_palm
+  - first:
+      20: 2000000
+    second: Camera
+  - first:
+      21: 2100000
+    second: No Name
+  - first:
+      23: 2300000
+    second: //RootNode
+  - first:
+      23: 2300002
+    second: island
+  - first:
+      23: 2300004
+    second: island.002
+  - first:
+      23: 2300006
+    second: island.004
+  - first:
+      23: 2300008
+    second: island.001
+  - first:
+      23: 2300010
+    second: island.003
+  - first:
+      23: 2300012
+    second: man-prehistoric
+  - first:
+      23: 2300014
+    second: palm
+  - first:
+      33: 3300000
+    second: //RootNode
+  - first:
+      33: 3300002
+    second: island
+  - first:
+      33: 3300004
+    second: island.002
+  - first:
+      33: 3300006
+    second: island.004
+  - first:
+      33: 3300008
+    second: island.001
+  - first:
+      33: 3300010
+    second: island.003
+  - first:
+      33: 3300012
+    second: man-prehistoric
+  - first:
+      33: 3300014
+    second: palm
+  - first:
+      43: 4300000
+    second: island
+  - first:
+      43: 4300002
+    second: island.002
+  - first:
+      43: 4300004
+    second: island.004
+  - first:
+      43: 4300006
+    second: man-prehistoric
+  - first:
+      43: 4300008
+    second: island.001
+  - first:
+      43: 4300010
+    second: island.003
+  - first:
+      43: 4300012
+    second: palm
+  - first:
+      43: 4300014
+    second: s
+  - first:
+      108: 10800000
+    second: Light
+  - first:
+      41386430: 2186277476908879412
+    second: ImportLogs
   externalObjects: {}
   materials:
-    importMaterials: 0
+    materialImportMode: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -138,25 +338,32 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -165,10 +372,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -178,13 +385,17 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 0
   humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
   additionalBone: 0
   userData: 
   assetBundleName: 

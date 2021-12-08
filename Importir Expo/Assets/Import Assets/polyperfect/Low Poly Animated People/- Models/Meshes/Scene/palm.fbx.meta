@@ -1,79 +1,215 @@
 fileFormatVersion: 2
 guid: 81e738ca08e80d748923eeee32518d08
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: Bone
-    100002: Bone.001
-    100004: Bone.002
-    100006: Bone.003
-    100008: Bone.004
-    100010: Bone.005
-    100012: Bone.006
-    100014: Bone.007
-    100016: Bone.007_end
-    100018: Bone.008
-    100020: Bone.009
-    100022: Bone.010
-    100024: Bone.010_end
-    100026: Bone.011
-    100028: Bone.012
-    100030: Bone.013
-    100032: Bone.013_end
-    100034: Bone.014
-    100036: Bone.015
-    100038: Bone.016
-    100040: Bone.016_end
-    100042: Bone.017
-    100044: Bone.018
-    100046: Bone.019
-    100048: Bone.019_end
-    100050: //RootNode
-    100052: palm
-    100054: RIG_palm
-    100056: island
-    400000: Bone
-    400002: Bone.001
-    400004: Bone.002
-    400006: Bone.003
-    400008: Bone.004
-    400010: Bone.005
-    400012: Bone.006
-    400014: Bone.007
-    400016: Bone.007_end
-    400018: Bone.008
-    400020: Bone.009
-    400022: Bone.010
-    400024: Bone.010_end
-    400026: Bone.011
-    400028: Bone.012
-    400030: Bone.013
-    400032: Bone.013_end
-    400034: Bone.014
-    400036: Bone.015
-    400038: Bone.016
-    400040: Bone.016_end
-    400042: Bone.017
-    400044: Bone.018
-    400046: Bone.019
-    400048: Bone.019_end
-    400050: palm
-    400052: //RootNode
-    400054: RIG_palm
-    400056: island
-    2100000: LOWPOLY-COLORS.003
-    2300000: island
-    3300000: island
-    4300000: palm
-    4300002: island
-    7400000: palm-idle
-    7400002: palm-idle
-    9500000: //RootNode
-    13700000: palm
-    2186277476908879412: ImportLogs
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Bone
+  - first:
+      1: 100002
+    second: Bone.001
+  - first:
+      1: 100004
+    second: Bone.002
+  - first:
+      1: 100006
+    second: Bone.003
+  - first:
+      1: 100008
+    second: Bone.004
+  - first:
+      1: 100010
+    second: Bone.005
+  - first:
+      1: 100012
+    second: Bone.006
+  - first:
+      1: 100014
+    second: Bone.007
+  - first:
+      1: 100016
+    second: Bone.007_end
+  - first:
+      1: 100018
+    second: Bone.008
+  - first:
+      1: 100020
+    second: Bone.009
+  - first:
+      1: 100022
+    second: Bone.010
+  - first:
+      1: 100024
+    second: Bone.010_end
+  - first:
+      1: 100026
+    second: Bone.011
+  - first:
+      1: 100028
+    second: Bone.012
+  - first:
+      1: 100030
+    second: Bone.013
+  - first:
+      1: 100032
+    second: Bone.013_end
+  - first:
+      1: 100034
+    second: Bone.014
+  - first:
+      1: 100036
+    second: Bone.015
+  - first:
+      1: 100038
+    second: Bone.016
+  - first:
+      1: 100040
+    second: Bone.016_end
+  - first:
+      1: 100042
+    second: Bone.017
+  - first:
+      1: 100044
+    second: Bone.018
+  - first:
+      1: 100046
+    second: Bone.019
+  - first:
+      1: 100048
+    second: Bone.019_end
+  - first:
+      1: 100050
+    second: //RootNode
+  - first:
+      1: 100052
+    second: palm
+  - first:
+      1: 100054
+    second: RIG_palm
+  - first:
+      1: 100056
+    second: island
+  - first:
+      4: 400000
+    second: Bone
+  - first:
+      4: 400002
+    second: Bone.001
+  - first:
+      4: 400004
+    second: Bone.002
+  - first:
+      4: 400006
+    second: Bone.003
+  - first:
+      4: 400008
+    second: Bone.004
+  - first:
+      4: 400010
+    second: Bone.005
+  - first:
+      4: 400012
+    second: Bone.006
+  - first:
+      4: 400014
+    second: Bone.007
+  - first:
+      4: 400016
+    second: Bone.007_end
+  - first:
+      4: 400018
+    second: Bone.008
+  - first:
+      4: 400020
+    second: Bone.009
+  - first:
+      4: 400022
+    second: Bone.010
+  - first:
+      4: 400024
+    second: Bone.010_end
+  - first:
+      4: 400026
+    second: Bone.011
+  - first:
+      4: 400028
+    second: Bone.012
+  - first:
+      4: 400030
+    second: Bone.013
+  - first:
+      4: 400032
+    second: Bone.013_end
+  - first:
+      4: 400034
+    second: Bone.014
+  - first:
+      4: 400036
+    second: Bone.015
+  - first:
+      4: 400038
+    second: Bone.016
+  - first:
+      4: 400040
+    second: Bone.016_end
+  - first:
+      4: 400042
+    second: Bone.017
+  - first:
+      4: 400044
+    second: Bone.018
+  - first:
+      4: 400046
+    second: Bone.019
+  - first:
+      4: 400048
+    second: Bone.019_end
+  - first:
+      4: 400050
+    second: palm
+  - first:
+      4: 400052
+    second: //RootNode
+  - first:
+      4: 400054
+    second: RIG_palm
+  - first:
+      4: 400056
+    second: island
+  - first:
+      21: 2100000
+    second: LOWPOLY-COLORS.003
+  - first:
+      23: 2300000
+    second: island
+  - first:
+      33: 3300000
+    second: island
+  - first:
+      43: 4300000
+    second: palm
+  - first:
+      43: 4300002
+    second: island
+  - first:
+      74: 7400000
+    second: palm-idle
+  - first:
+      74: 7400002
+    second: palm-idle
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: palm
+  - first:
+      41386430: 2186277476908879412
+    second: ImportLogs
   externalObjects: {}
   materials:
-    importMaterials: 0
+    materialImportMode: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -102,6 +238,7 @@ ModelImporter:
     - serializedVersion: 16
       name: palm-idle
       takeName: RIG_palm|palm-idle
+      internalID: 0
       firstFrame: 0
       lastFrame: 99
       wrapMode: 0
@@ -134,25 +271,32 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -161,10 +305,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -174,13 +318,17 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
