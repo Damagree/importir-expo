@@ -6,9 +6,20 @@ public class PauseMenu : MonoBehaviour
 
     public static bool GameIsPaused = false;
 
+    [SerializeField] bool pauseFromStart = false;
     [SerializeField] GameObject pauseMenuUi;
+    [SerializeField] UnityEvent pauseFromStartEvent;
     [SerializeField] UnityEvent resumeEvent;
     [SerializeField] UnityEvent pauseEvent;
+
+    private void Start()
+    {
+        if (pauseFromStart)
+        {
+            Pause();
+            pauseFromStartEvent.Invoke();
+        }
+    }
 
     // Update is called once per frame
     void Update()
