@@ -8,6 +8,7 @@ public class PauseMenu : MonoBehaviour
 
     [SerializeField] bool pauseFromStart = false;
     [SerializeField] GameObject pauseMenuUi;
+    [SerializeField] GameObject mousecontroller;
     [SerializeField] UnityEvent pauseFromStartEvent;
     [SerializeField] UnityEvent resumeEvent;
     [SerializeField] UnityEvent pauseEvent;
@@ -16,7 +17,7 @@ public class PauseMenu : MonoBehaviour
     {
         if (pauseFromStart)
         {
-            Pause();
+            PauseNoEvent();
             pauseFromStartEvent.Invoke();
         }
     }
@@ -46,12 +47,21 @@ public class PauseMenu : MonoBehaviour
         resumeEvent.Invoke();
     }
 
-    void Pause()
+    public void Pause()
     {
         pauseMenuUi.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
         Cursor.lockState = CursorLockMode.None;
         pauseEvent.Invoke();
+    }
+
+    public void PauseNoEvent()
+    {
+        Time.timeScale = 0f;
+        GameIsPaused = true;
+        Cursor.lockState = CursorLockMode.None;
+        mousecontroller.GetComponent<InteractWithButton>().enabled = false;
+        mousecontroller.GetComponent<MouseLook>().enabled = false;
     }
 }
