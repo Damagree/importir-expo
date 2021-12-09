@@ -1,19 +1,18 @@
 ﻿using Newtonsoft.Json.Linq;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.Networking;
 using YoutubeLight;
 
-public class YoutubePlayerLivestream : MonoBehaviour
-{
+public class YoutubePlayerLivestream : MonoBehaviour {
 
     public string _livestreamUrl;
 
-    void Start()
-    {
+	void Start () {
         GetLivestreamUrl(_livestreamUrl);
     }
 
@@ -98,7 +97,7 @@ public class YoutubePlayerLivestream : MonoBehaviour
         //jsonforHtml
         var player_response = string.Empty;
         bool tempfix = false;
-
+        
         if (Regex.IsMatch(pageSource, @"[""\']status[""\']\s*:\s*[""\']LOGIN_REQUIRED") || tempfix)
         {
             var url = "https://www.docs.google.com/get_video_info?video_id=" + videoId + "&eurl=https://youtube.googleapis.com/v/" + videoId + "&html5=1&c=TVHTML5&cver=6.20180913";
@@ -131,21 +130,21 @@ public class YoutubePlayerLivestream : MonoBehaviour
                     //player_response = JObject.Parse(extractedJson)["args"]["player_response"].ToString();
                 }
             }
-
+    
             dataRegexOption = new Regex(@"ytInitialPlayerResponse\s*=\s*({.+?})\s*;\s*(?:var\s+meta|</script|\n)", RegexOptions.Multiline);
             dataMatch = dataRegexOption.Match(pageSource);
             if (dataMatch.Success)
             {
                 player_response = dataMatch.Result("$1");
             }
-
+    
             dataRegexOption = new Regex(@"ytInitialPlayerResponse\s*=\s*({.+?})\s*;\s*(?:var\s+meta|</script|\n)", RegexOptions.Multiline);
             dataMatch = dataRegexOption.Match(pageSource);
             if (dataMatch.Success)
             {
                 player_response = dataMatch.Result("$1");
             }
-
+    
             dataRegexOption = new Regex(@"ytInitialPlayerResponse\s*=\s*({.+?})\s*;", RegexOptions.Multiline);
             dataMatch = dataRegexOption.Match(pageSource);
             if (dataMatch.Success)
@@ -171,7 +170,7 @@ public class YoutubePlayerLivestream : MonoBehaviour
         }
 
 
-
+        
     }
 
     public static void WriteLog(string filename, string c)

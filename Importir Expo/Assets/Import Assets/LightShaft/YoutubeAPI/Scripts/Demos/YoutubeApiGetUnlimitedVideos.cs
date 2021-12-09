@@ -1,11 +1,10 @@
-﻿using SimpleJSON;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SimpleJSON;
 using UnityEngine.Networking;
 
-public class YoutubeApiGetUnlimitedVideos : MonoBehaviour
-{
+public class YoutubeApiGetUnlimitedVideos : MonoBehaviour {
 
     public string APIKey = "AIzaSyDD-lxGLHsBIFPFPt2i31fc0tAHGeAb8mc";
     public string searchKeyword = "Unity";
@@ -64,7 +63,7 @@ public class YoutubeApiGetUnlimitedVideos : MonoBehaviour
             tempMaxResult = 50;
         else
             tempMaxResult = maxResult;
-        string newurl = UnityWebRequest.EscapeURL("https://www.googleapis.com/youtube/v3/search/?pageToken=" + pageToken + "&type=video&maxResults=" + tempMaxResult + "&part=snippet,id&key=" + APIKey + "");
+        string newurl = UnityWebRequest.EscapeURL("https://www.googleapis.com/youtube/v3/search/?pageToken="+pageToken+"&type=video&maxResults=" + tempMaxResult + "&part=snippet,id&key=" + APIKey + "");
 
         UnityWebRequest request = UnityWebRequest.Get(UnityWebRequest.UnEscapeURL(newurl));
         yield return request.SendWebRequest();

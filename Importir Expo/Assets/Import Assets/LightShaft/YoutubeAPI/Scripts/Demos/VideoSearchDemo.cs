@@ -1,8 +1,9 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 
-public class VideoSearchDemo : MonoBehaviour
-{
+public class VideoSearchDemo : MonoBehaviour {
     YoutubeAPIManager youtubeapi;
 
     public Text searchField;
@@ -13,15 +14,14 @@ public class VideoSearchDemo : MonoBehaviour
     public GameObject videoUIResult;
     public GameObject mainUI;
 
-    void Start()
-    {
+    void Start () {
         //Get the api component
         youtubeapi = GameObject.FindObjectOfType<YoutubeAPIManager>();
         if (youtubeapi == null)
         {
             youtubeapi = gameObject.AddComponent<YoutubeAPIManager>();
         }
-    }
+	}
 
     public string customFilter;
 
@@ -44,7 +44,7 @@ public class VideoSearchDemo : MonoBehaviour
         youtubeapi.TrendingVideos(regionCode, 10, OnSearchDone);
     }
 
-    public void Search()
+	public void Search()
     {
         CustomFilterCheck();
         YoutubeAPIManager.YoutubeSearchOrderFilter mainFilter = YoutubeAPIManager.YoutubeSearchOrderFilter.none;
@@ -75,7 +75,7 @@ public class VideoSearchDemo : MonoBehaviour
         }
 
         if (categoryFilter.isOn)
-            youtubeapi.SearchByCategory(searchField.text, categoryField.text, 10, mainFilter, YoutubeAPIManager.YoutubeSafeSearchFilter.none, OnSearchDone);
+            youtubeapi.SearchByCategory(searchField.text,categoryField.text, 10, mainFilter, YoutubeAPIManager.YoutubeSafeSearchFilter.none, OnSearchDone);
         else
             youtubeapi.Search(searchField.text, 10, mainFilter, YoutubeAPIManager.YoutubeSafeSearchFilter.none, customFilter, OnSearchDone);
     }

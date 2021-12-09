@@ -1,7 +1,8 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class YoutubeLogo : MonoBehaviour
-{
+public class YoutubeLogo : MonoBehaviour {
 
     public string youtubeurl;
 

@@ -1,8 +1,9 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 
-public class CommentsDemo : MonoBehaviour
-{
+public class CommentsDemo : MonoBehaviour {
     YoutubeAPIManager youtubeapi;
 
     public Text videoIdInput;
@@ -26,9 +27,9 @@ public class CommentsDemo : MonoBehaviour
     void OnFinishLoadingComments(YoutubeComments[] comments)
     {
         string allComments = "";
-        for (int index = 0; index < comments.Length; index++)
+        for(int index = 0; index < comments.Length; index++)
         {
-            allComments += "<color=red>" + comments[index].authorDisplayName + "</color>: " + comments[index].textDisplay + "\n";
+            allComments += "<color=red>"+comments[index].authorDisplayName + "</color>: " + comments[index].textDisplay + "\n";
         }
         commentsTextArea.text = allComments;
     }

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.Events;
 
 namespace LightShaft.Scripts
@@ -7,7 +8,7 @@ namespace LightShaft.Scripts
     {
         private YoutubePlayer _player;
         [Header("Custom Events To use with video player only")]
-
+        
         [Tooltip("When the url's are loaded")]
         public UrlLoadEvent OnYoutubeUrlAreReady;
         [Tooltip("When the videos are ready to play")]
@@ -39,10 +40,10 @@ namespace LightShaft.Scripts
             {
                 if (!ev.Called)
                 {
-                    if (ev.time <= _player.videoPlayer.time && ev.time > (_player.videoPlayer.time - 2))
+                    if (ev.time <= _player.videoPlayer.time && ev.time > (_player.videoPlayer.time-2))
                     {
                         ev.Called = true;
-                        if (ev.pauseVideo)
+                        if(ev.pauseVideo)
                             _player.Pause();
                         ev.timeEvent.Invoke();
                     }
@@ -58,7 +59,7 @@ public class YoutubeTimedEvent
     public int time;
     public bool pauseVideo = false;
     public UnityEvent timeEvent;
-
+    
     private bool called;
 
     public bool Called

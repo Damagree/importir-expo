@@ -1,4 +1,6 @@
-﻿using LightShaft.Scripts;
+﻿using System.Collections;
+using System.Collections.Generic;
+using LightShaft.Scripts;
 using UnityEngine;
 using UnityEngine.UI;
 

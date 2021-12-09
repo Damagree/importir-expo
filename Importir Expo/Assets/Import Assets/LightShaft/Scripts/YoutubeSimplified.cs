@@ -1,4 +1,6 @@
-﻿using LightShaft.Scripts;
+﻿using System.Collections;
+using System.Collections.Generic;
+using LightShaft.Scripts;
 using UnityEngine;
 using UnityEngine.Video;
 
@@ -32,7 +34,7 @@ public class YoutubeSimplified : MonoBehaviour
         player.autoPlayOnStart = autoPlay;
         player.videoQuality = YoutubePlayer.YoutubeVideoQuality.STANDARD;
 
-        if (autoPlay)
+        if(autoPlay)
             player.Play(url);
     }
 }

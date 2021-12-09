@@ -1,5 +1,5 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
+using System;
 
 /// <summary>
 /// Draws the field/property ONLY if the compared property compared by the comparison type with the value of comparedValue returns true.

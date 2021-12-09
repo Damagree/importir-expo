@@ -112,6 +112,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!23 &540256648 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 23249846054813134, guid: afcb2c04ccaaed1478594f9f88e45133,
+    type: 3}
+  m_PrefabInstance: {fileID: 5780560980904665886}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &937742956
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,6 +383,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1807626889434942, guid: afcb2c04ccaaed1478594f9f88e45133, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1852887322894446, guid: afcb2c04ccaaed1478594f9f88e45133, type: 3}
       propertyPath: m_Name
       value: Youtube360Player
@@ -425,11 +435,51 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 23249846054813134, guid: afcb2c04ccaaed1478594f9f88e45133,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 23249846054813134, guid: afcb2c04ccaaed1478594f9f88e45133,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114924026913519534, guid: afcb2c04ccaaed1478594f9f88e45133,
+        type: 3}
+      propertyPath: youtubeUrl
+      value: https://www.youtube.com/watch?v=uL2NRPxSSNs
+      objectReference: {fileID: 0}
+    - target: {fileID: 114924026913519534, guid: afcb2c04ccaaed1478594f9f88e45133,
+        type: 3}
+      propertyPath: is360
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114924026913519534, guid: afcb2c04ccaaed1478594f9f88e45133,
+        type: 3}
+      propertyPath: EACMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 469ae8d9647951444a25fef2584849d1, type: 2}
+    - target: {fileID: 114924026913519534, guid: afcb2c04ccaaed1478594f9f88e45133,
+        type: 3}
+      propertyPath: videoQuality
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114924026913519534, guid: afcb2c04ccaaed1478594f9f88e45133,
+        type: 3}
+      propertyPath: Material360
+      value: 
+      objectReference: {fileID: 2100000, guid: 05ece7f22dee8c945bb12e25df090090, type: 2}
     - target: {fileID: 223351519292930390, guid: afcb2c04ccaaed1478594f9f88e45133,
         type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1886472883}
+    - target: {fileID: 328720576226774052, guid: afcb2c04ccaaed1478594f9f88e45133,
+        type: 3}
+      propertyPath: m_TargetMaterialRenderer
+      value: 
+      objectReference: {fileID: 540256648}
     - target: {fileID: 1999822928092684150, guid: afcb2c04ccaaed1478594f9f88e45133,
         type: 3}
       propertyPath: m_AnchorMax.y

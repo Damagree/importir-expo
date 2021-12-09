@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Video;
 
 namespace LightShaft.Scripts
@@ -58,7 +60,6 @@ namespace LightShaft.Scripts
             Stop();
             prepareVideoToPlayLater = true;
             autoPlayOnStart = false;
-            Pause();
             PlayYoutubeVideo(url);
 
         }
@@ -241,7 +242,16 @@ namespace LightShaft.Scripts
                     _controller.showPlayerControl = false;  //Disable player controller because there is not playback controller attached;
                 }
                 else
-                    _controller.playbackSlider.maxValue = Mathf.RoundToInt(videoPlayer.frameCount / videoPlayer.frameRate);
+                {
+                    if (videoQuality != YoutubeVideoQuality.STANDARD)
+                    {
+                        _controller.playbackSlider.maxValue = Mathf.RoundToInt(audioPlayer.frameCount / audioPlayer.frameRate);
+                    }
+                    else
+                    {
+                        _controller.playbackSlider.maxValue = Mathf.RoundToInt(videoPlayer.frameCount / videoPlayer.frameRate);
+                    }
+                }
             }
 
             if (_events != null)
@@ -359,5 +369,5 @@ namespace LightShaft.Scripts
 
         }
     }
-
+    
 }

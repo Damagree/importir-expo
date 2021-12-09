@@ -1,14 +1,14 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 
-public class IndividualVideoDataDemo : MonoBehaviour
-{
+public class IndividualVideoDataDemo : MonoBehaviour {
 
     YoutubeAPIManager youtubeapi;
 
-    public Text videoIdInput, UI_title, UI_description, UI_duration, UI_likes, UI_dislikes, UI_favorites, UI_comments, UI_views;
+    public Text videoIdInput,UI_title, UI_description, UI_duration, UI_likes, UI_dislikes, UI_favorites, UI_comments, UI_views;
     public Image UI_thumbnail;
 
     void Start()
@@ -30,7 +30,7 @@ public class IndividualVideoDataDemo : MonoBehaviour
     {
         UI_title.text = result.snippet.title;
         UI_description.text = result.snippet.description;
-        UI_duration.text = "Duration: " + result.contentDetails.duration.Replace("PT", "");
+        UI_duration.text = "Duration: "+result.contentDetails.duration.Replace("PT", "");
         UI_likes.text = "Likes: " + result.statistics.likeCount;
         UI_dislikes.text = "Dislikes: " + result.statistics.dislikeCount;
         UI_favorites.text = "Favs: " + result.statistics.favoriteCount;
@@ -49,7 +49,7 @@ public class IndividualVideoDataDemo : MonoBehaviour
         UnityWebRequest request = UnityWebRequestTexture.GetTexture(url);
         //request.SetRequestHeader("User-Agent", USER_AGENT);
         yield return request.SendWebRequest();
-
+        
         Texture2D thumb = DownloadHandlerTexture.GetContent(request);
         UI_thumbnail.sprite = Sprite.Create(thumb, new Rect(0, 0, thumb.width, thumb.height), new Vector2(0.5f, 0.5f), 100);
     }

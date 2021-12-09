@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
+using UnityEngine;
 using UnityEngine.Networking;
 
 namespace YoutubeLight
@@ -77,9 +80,9 @@ namespace YoutubeLight
                     resultQuery.Append("&");
                 }
 
-                if (pair.Key == "lsig")
+                if(pair.Key == "lsig")
                 {
-                    if (pair.Value == "" || pair.Value == string.Empty)
+                    if(pair.Value == "" || pair.Value == string.Empty)
                     {
                         resultQuery.Append(pair.Key);
                         resultQuery.Append("=");
@@ -98,7 +101,7 @@ namespace YoutubeLight
                     resultQuery.Append("=");
                     resultQuery.Append(pair.Value);
                 }
-
+                
                 //Debug.Log("r: " + resultQuery.ToString());
 
                 isFirst = false;

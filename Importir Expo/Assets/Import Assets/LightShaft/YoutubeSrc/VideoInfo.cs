@@ -158,7 +158,7 @@ namespace YoutubeLight
         /// </value>
         public bool CanExtractAudio
         {
-            get { return this.VideoType == VideoType.Flash; }
+            get { return this.VideoType == VideoType.Flash ; }
         }
 
         public string DownloadUrl { get; internal set; }

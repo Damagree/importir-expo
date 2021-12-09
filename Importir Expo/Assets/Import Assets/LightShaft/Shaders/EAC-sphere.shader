@@ -7,8 +7,8 @@
 	SubShader
 	{
 		// No culling or depth
-		Cull Front ZWrite Off ZTest Always // Cull front will flip normals
-
+		Cull Off // Cull front will flip normals
+		
 		Pass
 		{
 			CGPROGRAM
