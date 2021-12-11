@@ -2361,6 +2361,8 @@ MonoBehaviour:
   audioUrl: 
   ForceGetWebServer: 0
   progressStartDrag: 0
+  EACMaterial: {fileID: 0}
+  Material360: {fileID: 0}
   pauseCalled: 0
   isSyncing: 0
   encryptedSignatureVideo: 
@@ -2415,6 +2417,8 @@ MonoBehaviour:
   audioUrl: 
   ForceGetWebServer: 0
   progressStartDrag: 0
+  EACMaterial: {fileID: 0}
+  Material360: {fileID: 0}
   pauseCalled: 0
   isSyncing: 0
   encryptedSignatureVideo: 
